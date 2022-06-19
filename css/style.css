@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray !important;
+    font-family: 'Work Sans', sans-serif;
+}
+.thanks{
+    background-image: url(../img/5.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 250px;
+}
+.face{
+    height:30px;
+    width: 30px; 
+    border: 1px solid black;
+    border-radius: 17px;
+}
+.basic{
+    background-attachment: fixed;
+    background-size: cover;
+    height: 250px;  
+    background-image: url(../img/6.jpg);
+}
+.BT2{
+    position: relative;
+    left: 30px;
+}
+.BT2::before{
+position: absolute;
+content: "";
+border-width: 10px;
+border-style:solid;
+border-color: transparent transparent lightblue transparent;
+top: 20px;
+left: 13px;
+display: none;
+}
+.BT2::after{
+position: absolute;
+content: " ";
+height: 40px;
+width: 80px;
+background-color: lightblue;
+top: 40px;
+left: -15px;
+border-radius: 5px;
+display: none;
+}
+.BT2:active::before,
+.btn:hover::before{
+    display: block;
+
+}
+.BT2:hover::after{
+    content: "copy to clipboard";
+    display: block;
+}
+.BT2:active::after{
+    content: "copied";
+    display: block;
+    height: 25px;
+}
